@@ -1043,6 +1043,7 @@ INPUT c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty
+INPUT c:/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT ./beamerthemeeth.sty
 INPUT ./beamerthemeeth.sty
 INPUT beamerthemeeth.sty
@@ -1724,6 +1725,40 @@ INPUT ./elements/one-loop open string.PNG
 INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvri.tfm
+INPUT ./elements/exponential map.PNG
+INPUT ./elements/exponential map.PNG
+INPUT elements/exponential map.PNG
+INPUT ./elements/exponential map.PNG
+INPUT ./elements/exponential map.PNG
+INPUT ./elements/LFT.PNG
+INPUT ./elements/LFT.PNG
+INPUT elements/LFT.PNG
+INPUT ./elements/LFT.PNG
+INPUT ./elements/LFT.PNG
+INPUT ./elements/canonical annulus.PNG
+INPUT ./elements/canonical annulus.PNG
+INPUT elements/canonical annulus.PNG
+INPUT ./elements/canonical annulus.PNG
+INPUT ./elements/canonical annulus.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/region C.PNG
+INPUT ./elements/region C.PNG
+INPUT elements/region C.PNG
+INPUT ./elements/region C.PNG
+INPUT ./elements/region C.PNG
+INPUT ./elements/first ident.PNG
+INPUT ./elements/first ident.PNG
+INPUT elements/first ident.PNG
+INPUT ./elements/first ident.PNG
+INPUT ./elements/first ident.PNG
+INPUT ./elements/second ident.PNG
+INPUT ./elements/second ident.PNG
+INPUT elements/second ident.PNG
+INPUT ./elements/second ident.PNG
+INPUT ./elements/second ident.PNG
 INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
@@ -1833,19 +1868,23 @@ INPUT ./sample.out
 INPUT ./sample.out
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
-INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
-INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc
+INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr5.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr9.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmss17.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy5.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsy9.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt8.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt9.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb
 INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb
+INPUT c:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb

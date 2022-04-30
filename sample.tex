@@ -1,5 +1,7 @@
 \documentclass[11pt,aspectratio=169]{beamer}
 
+\usepackage{amssymb}
+
 \title{Torus amplitudes and modular invariance}
 \date[16.5.2022]{Seminar on Theoretical Physics}
 \author{Otto T.P. Schmidt}
@@ -82,12 +84,12 @@
 
 \begin{frame}[fragile]{\underline{One-loop open strings}}
 
-	Before approaching the moduli space of tori, lets consider a one-loop open string with light-cone momentum $p^{+}$.
+	Before approaching the moduli space of tori, lets consider a one-loop open string with light-cone momentum $p^{+}$. This will serve as an intuitive analogon.
 
 	The light-cone diagram is:
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width = 0.55\textwidth]{elements/one-loop open string.PNG}
+		\includegraphics[width = 0.45\textwidth]{elements/one-loop open string.PNG}
 	\end{figure}
 
 	For fixed external momentum $p^+$ we find the two parameters: $\Delta T \in (0, \infty)$ and $p_{1}^{+} \in (0, p^+)$.
@@ -97,6 +99,50 @@
 \end{frame}
 
 \begin{frame}{\underline{Canonical annulus}}
+
+	Use $w = \tau + i \sigma$ and apply conformal transformations:
+	\\~\\
+	\begin{enumerate}
+		\item Exponential map: $z = exp[\frac{w}{2 \alpha^{'} p^+}]$
+		\item Linear fractional transformation: $\eta = \frac{1+iz}{1-iz}$
+		% \item Canonical annulus: \textit{A region in} \mathbb{C} \textit{that is topologically an annulus can be mapped conformally to a canonical annulus}
+		\item Canonical annulus: \textit{A region in $\mathbb{C}$ that is topologically an annulus can be mapped conformally to a canonical annulus}
+
+	\end{enumerate}
+
+	\begin{columns}
+		\begin{column}{0.25\textwidth}
+			\includegraphics[width=\columnwidth]{elements/exponential map.PNG}
+		\end{column}
+		\begin{column}{0.25\textwidth}
+			\includegraphics[width=\columnwidth]{elements/LFT.PNG}
+		\end{column}
+		\begin{column}{0.25\textwidth}
+			\includegraphics[width=\columnwidth]{elements/canonical annulus.PNG}
+		\end{column}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}{\underline{Rectangular torus}}
+
+	In order to apply the concept of moduli spaces to a torus, we need to assure that a torus is indeed a Riemann surface.
+	\\
+	Consider a rectangular region of $\mathbb{C}$. By applying the analytic identifications $z \sim z + L_1$ and $z \sim z + iL_2$
+	we obtain a torus. This shows that the region remains a Riemann surface. 
+	\\
+	Graphically:
+	\begin{columns}
+		\begin{column}{0.25\textwidth}
+			\includegraphics[width=\columnwidth]{elements/region C.PNG}
+		\end{column}
+		\begin{column}{0.2\textwidth}
+			\includegraphics[width=\columnwidth]{elements/first ident.PNG}
+		\end{column}
+		\begin{column}{0.25\textwidth}
+			\includegraphics[width=\columnwidth]{elements/second ident.PNG}
+		\end{column}
+	\end{columns}
 
 
 	
