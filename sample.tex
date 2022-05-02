@@ -35,7 +35,7 @@
 
 \section{Motivation}
 
-\begin{frame}[fragile]{Interactions and observables}
+\begin{frame}[fragile]{\underline{Interactions and observables}}
 
 	In the study of string interactions, the ultimate goal will be the assignment of a probability for a certain process and the prediction of a physical cross section.
 	\\~\\
@@ -54,7 +54,7 @@
 
 \end{frame}
 
-\begin{frame}[fragile]{Loop amplitudes in string theory}
+\begin{frame}[fragile]{\underline{Loop amplitudes in string theory}}
 	
 	In order to obtain accurate scattering amplitudes of processes,
 	one needs to include contributions from loops in string diagrams. 
@@ -81,6 +81,8 @@
 
 
 \section{The moduli space of tori}
+
+\subsection{One-loop open strings}
 
 \begin{frame}[fragile]{\underline{One-loop open strings}}
 
@@ -124,7 +126,9 @@
 	
 \end{frame}
 
-\begin{frame}{\underline{Rectangular torus}}
+\subsection{Rectangular tori}
+
+\begin{frame}{\underline{Rectangular tori}}
 
 	In order to apply the concept of moduli spaces to a torus, we need to assure that a torus is indeed a Riemann surface.
 	\\
@@ -145,6 +149,81 @@
 	\end{columns}
 
 
+	
+\end{frame}
+
+\begin{frame}{\underline{Parametrisation}}
+
+	We have:
+	\\
+	\begin{block}{Rectangular torus}
+		$z \sim z + L_1$ and $z \sim z + iL_2$
+	\end{block}
+	\bigskip
+	By applying $z^{'} = \frac{z}{L_1}$ the identifications become:
+	\begin{block}{Torus parameter T}
+		$z^{'} \sim z^{'} + 1$ and $z^{'} \sim z^{'} + iT$ with $T = \frac{L_2}{L_1}$
+	\end{block}
+
+\end{frame}
+
+\begin{frame}{\underline{Ultraviolet divergence}}
+
+	T is a parameter of the torus but does not yet define the moduli space, i.e. tori with different T can be conformally equivalent.
+	\\
+	Consider the following series of conformal maps to a rectangular torus with $T<1$:
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 0.30\textwidth]{elements/three maps.PNG}
+	\end{figure}
+	\begin{block}{Rectangular torus}
+		Tori with $T$ and $\frac{1}{T}$ are conformally equivalent
+		\\
+		$\rightarrow$ The moduli space can be chosen to be $T \in (0,1]$ or $T \in [1, \infty)$
+	\end{block}
+	
+\end{frame}
+
+\subsection{General tori}
+
+\begin{frame}{General tori}
+	Rectangular tori represent only a subset off all conformally inequivalent tori. Let's construct a more general class of tori:
+	\\
+	\begin{block}{General construction of a torus Riemann surface}
+		Choose $\omega_1, \omega_2 \in \mathbb{C}$ with $\Im(\frac{\omega_1}{\omega_2})$.
+		\\
+		A torus is obtained by the indentifications $z \sim z + \omega_1$ and $z \sim z + \omega_2$.
+		\\
+		By scaling we obtain $z \sim z + 1$ and $z \sim z + \tau$ with $\tau = \frac{\omega_2}{\omega_1}$, $\Im(\tau) >0$.
+	\end{block}
+	$\rightarrow$ Note that for $\tau = iT$ ($\Leftrightarrow \Re(\tau) = 0$) we consider the rectangular torus.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 0.45\textwidth]{elements/general torus.PNG}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Twisting the torus}
+	Intuitively, if a cylinder is twisted and the end surfaces are connected, we expect a different torus. 
+	\\
+	\underline{Formally}: Consider $\Re(\tau) \neq 0$ and a point $P = 0 = \tau$. We can reconstruct the rectangular $\textit{fundamental domain}$ by using the identification $z \sim z + 1$.
+	\\
+	\underline{Graphically}:
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 0.55\textwidth]{elements/twisted torus.PNG}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{Twisting parameter}
+
+	
+	The point $P$ is no longer identified with a point on the perpendicular. Indeed the degree of twisting is parametrised by $\theta = 2\pi \Re(\tau)$.
+	How does $\theta$ affect the torus parameter $\tau$?
+	\\~\\
+	Consider the map $\tau \rightarrow \tau + 1$
 	
 \end{frame}
 

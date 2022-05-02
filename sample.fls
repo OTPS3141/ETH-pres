@@ -1672,21 +1672,6 @@ INPUT ./sample.vrb
 INPUT sample.vrb
 INPUT ./sample.vrb
 INPUT sample.vrb
-INPUT ./elements/eth_logo_kurz_pos.pdf
-INPUT elements/eth_logo_kurz_pos.pdf
-INPUT ./elements/eth_logo_kurz_pos.pdf
-OUTPUT sample.vrb
-INPUT ./sample.vrb
-INPUT sample.vrb
-INPUT ./sample.vrb
-INPUT sample.vrb
-INPUT ./elements/Feynman loop.PNG
-INPUT elements/Feynman loop.PNG
-INPUT ./elements/Feynman loop.PNG
-INPUT ./elements/Feynman loop.PNG
-INPUT ./elements/eth_logo_kurz_pos.pdf
-INPUT elements/eth_logo_kurz_pos.pdf
-INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
@@ -1703,6 +1688,21 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/wasy/wasy8.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+OUTPUT sample.vrb
+INPUT ./sample.vrb
+INPUT sample.vrb
+INPUT ./sample.vrb
+INPUT sample.vrb
+INPUT ./elements/Feynman loop.PNG
+INPUT elements/Feynman loop.PNG
+INPUT ./elements/Feynman loop.PNG
+INPUT ./elements/Feynman loop.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
@@ -1759,6 +1759,39 @@ INPUT ./elements/second ident.PNG
 INPUT elements/second ident.PNG
 INPUT ./elements/second ident.PNG
 INPUT ./elements/second ident.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/three maps.PNG
+INPUT ./elements/three maps.PNG
+INPUT elements/three maps.PNG
+INPUT ./elements/three maps.PNG
+INPUT ./elements/three maps.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/general torus.PNG
+INPUT ./elements/general torus.PNG
+INPUT elements/general torus.PNG
+INPUT ./elements/general torus.PNG
+INPUT ./elements/general torus.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvri.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvr.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qhvri.tfm
+INPUT ./elements/twisted torus.PNG
+INPUT ./elements/twisted torus.PNG
+INPUT elements/twisted torus.PNG
+INPUT ./elements/twisted torus.PNG
+INPUT ./elements/twisted torus.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
