@@ -227,203 +227,24 @@
 	
 \end{frame}
 
-\begin{frame}[fragile]{Colors}
 
-	You need to pick these colors
-	\begin{itemize}
-		\item \texttt{titlefgcolor} (the box on the title page)
-		\item \texttt{titlebgcolor} (the background on the title page, in case you don't use an image)
-		\item \texttt{accentcolor} (alert text, blocks)
-	\end{itemize}
-	Use these commands at the beginning of the document
-	\begin{verbatim}
-		\colorlet{titlefgcolor}{ETHblue}
-		\colorlet{titlebgcolor}{ETHblue!60!black}		% Use only multiples of 20%
-		\colorlet{accentcolor}{ETHred}
-	\end{verbatim}
 
-	\medskip
 
-	\begin{tabular}{ll}
-	\textcolor{ETHblue}{\rule{4mm}{3mm}} ETHblue &
-	\textcolor{ETHpetrol}{\rule{4mm}{3mm}} ETHpetrol \\
-	\textcolor{ETHgreen}{\rule{4mm}{3mm}} ETHgreen &
-	\textcolor{ETHbronze}{\rule{4mm}{3mm}} ETHbronze \\
-	\textcolor{ETHred}{\rule{4mm}{3mm}} ETHred &
-	\textcolor{ETHpurple}{\rule{4mm}{3mm}} ETHpurple \\
-	\textcolor{ETHgray}{\rule{4mm}{3mm}} ETHgray 
-	\end{tabular}
-	
-	\medskip
-
-	Old ETH colors (\verb+ETH1+, ..., \verb+ETH9+) are deprecated and should not be used.\\
-	They are available as \verb+oldETH1+, ..., \verb+oldETH9+ for backward compatibility.
-	
-
-\end{frame}
-
-\begin{frame}
-
-	\frametitle{Title}
-	\framesubtitle{Subtitle}
-	
-	Text and some \alert{alert text}
-	
-	\[
-	m_a^\top h(\cdot)
-	\]
-	
-	
-	\begin{itemize}
-	\item list one
-	\item list another one
-		\begin{itemize}
-		\item test 1
-		\item test 2
-		\end{itemize}
-	\end{itemize}
-
-\end{frame}
 
 \section{Torus partition function}
 
-\begin{frame}{Title with no subtitle}
 
-	\begin{block}{Large box}
-	Notice that blocks are a bit larger than the text, that's intended.
-	\end{block}
-	
-	Column environments also eat some margins. Use the option \texttt{[onlytextwidth]} if you want to align columns to the wide blocks.
-	
-	\begin{columns}[onlytextwidth]
-	\begin{column}{0.45\textwidth}
-		\begin{block}{Small box}
-		With some more text
-		\end{block}
-	\end{column}
-	\begin{column}{0.5\textwidth}
-		Think outside the box!
-	\end{column}
-	\end{columns}
-
-\end{frame}
 
 \section{Modular invariance}
 
-\begin{frame}{And, of course, figures!}
-	
-	\begin{columns}
-		\begin{column}{0.33\textwidth}
-			\includegraphics[width=\columnwidth]{example-image-a}
-		\end{column}
-		\begin{column}{0.33\textwidth}
-			\includegraphics[width=\columnwidth]{example-image-b}
-		\end{column}
-		\begin{column}{0.33\textwidth}
-			\includegraphics[width=\columnwidth]{example-image-c}
-		\end{column}
-	\end{columns}
-
-\end{frame}
-
-\begin{frame}[fragile,t]{Free overlay}
-
-	The package \verb+textpos+ is also enabled in case you want to overlay content freely in the slide.
-
-	\begin{textblock}{18}(1,3)
-		{\tiny \color{accentcolor}
-		This text is located at position (1,3):\\
-		\verb+\begin{textblock}{3}(1,3) ... \end{textblock}+ \\
-		(1 unit equals to the left text margin)\par}
-	\end{textblock}
-
-	\begin{textblock*}{60mm}(0.5\paperwidth,0.5\paperheight)
-		{\tiny \color{accentcolor}
-		\includegraphics[width=20mm]{example-image-a}\\[2mm]
-		The upper left corner of this image is at the slide center point:\par
-		\verb+\begin{textblock*}{40mm}(0.5\paperwidth,0.5\paperheight)+\par
-		\verb+   \includegraphics[width=20mm]{example-image-a}+\par
-		\verb+\end{textblock*}+\par }
-	\end{textblock*}	
-
-\end{frame}
-
-\begin{frame}
-
-	\frametitle{Tables}
-	\framesubtitle{Don't use vanilla \LaTeX{}  tables please}
-	
-		\begin{center}
-			\begin{tabular}{@{}llr@{}}
-				\toprule\multicolumn{2}{c}{Item} \\
-				\cmidrule(r){1-2}Animal & Description & Price (\$)\\
-				\midrule
-				Gnat  & per gram  & 13.65 \\
-				& each      & 0.01 \\
-				Gnu   & stuffed   & 92.50 \\
-				Emu   & stuffed   & 33.33 \\
-				Armadillo & frozen & 8.99 \\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-
-\end{frame}
-
-\section{URLs and links}
-
-\begin{frame}{Clickable links}
-
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-	Ut enim ad minim veniam, quis nostrud exercitation...
-	
-	\medskip
-
-	\url{http://control.ee.ethz.ch}
-	
-	\href{http://control.ee.ethz.ch}{Automatic Control Laboratory}
-	
-	\email{name@ethz.ch}
-
-\end{frame}
-
-\begin{closingframe}
-
-Professor John Doe\\
-Role of person giving presentation\\
-\email{beat.muster@abcd.ethz.ch}
-
-\medskip
-
-ETH Zurich\\
-Organisational unit\\
-Building Room\\
-Street House number\\
-0000 Town, Country\\
-\url{http://www.abcd.ethz.ch}
-
-\end{closingframe}
 
 
-\begin{closingframe}
 
-	You can edit the content of the \texttt{closingframe} environment to design your own closing frame. Example:
-	
-	\vspace{15mm}
 
-	\begin{columns}
-		\begin{column}{0.55\textwidth}
-			\raggedleft
-			\includegraphics[width=40mm]{elements/ifa_logo} 
-		\end{column}
-		\begin{column}{0.45\textwidth}
-			\textbf{Author name}\\
-			\email{name@ethz.ch}	
-		\end{column}
-	\end{columns}
 
-	\vspace{20mm}
-			
-\end{closingframe}
+
+
+
 
 
 \end{document}
