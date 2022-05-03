@@ -234,7 +234,7 @@
 	\end{block}
 \end{frame}
 
-
+\subsection{Fundamental region}
 \begin{frame}{\underline{Moduli space I}}
 	So far we have established that $\Im(\tau) > 0 \Leftrightarrow \tau \in \mathbb{H}$.
 	However, the identification $\tau \sim \tau + 1$ implies that the space of inequivalent tori is smaller. Indeed:
@@ -252,16 +252,16 @@
 
 \begin{frame}{\underline{Moduli space II}}
 
-	We have found two identifications:
+	We have found two identifications with generators:
 	\begin{block}{T-module transform}
-		$\tau \sim \tau + 1$
+		$T\tau = \tau + 1$
 	\end{block}
 	\begin{block}{S-module transform}
-		$\tau \sim -\frac{1}{\tau}$
+		$S\tau = -\frac{1}{\tau}$
 	\end{block}
 	The corresponding fundamental domain should be a subset of $\mathcal{S}_{0}$. Indeed, the S-module transform identifies points in $|\tau| < 1$ with points in $|\tau| > 1$.
 	\\
-	Therefore:
+	Therefore we can postulate:
 	\begin{block}{Fundamental domain $\mathcal{F}_{0}$}
 		$\mathcal{F}_{0} = \{-\frac{1}{2} < \Re(\tau) < \frac{1}{2}, \Im(\tau) > 0, |\tau| \geq 1 \textrm{ and } \Re(\tau) \geq 0 \textrm{ if } |\tau| = 1\}$
 	\end{block}
@@ -280,6 +280,45 @@
 	
 \end{frame}
 
+\begin{frame}{\underline{Modular group $PSL(2, \mathbb{Z})$}}
+	Consider a general linear fractional transformation $g \in G$:
+	\begin{equation}
+		g\tau = \frac{a\tau + b}{c\tau + d},~\Im(g\tau) = \frac{\Im(\tau)}{|c\tau + d|^2}
+	\end{equation}
+	with $a, b, c, d \in \mathbb{Z}$ and $ad- bc = 1$.
+	\\
+	Equivalently we can use a matrix representation:
+	\begin{equation}
+		[g] = \begin{pmatrix}
+			a & b \\
+			c & d \\
+		\end{pmatrix},~\textrm{det}[g] = 1
+	\end{equation}
+	$\rightarrow$ $g$ satisfies the group homomorphism $\phi : G \rightarrow G$, $[g_1 g_2] \mapsto [g_1][g_2]$.
+	\\
+	We call $G$ the modular group $PSL(2, \mathbb{Z})$.
+	\\~\\
+	In matrix notation we see that $[T] = \big(\begin{smallmatrix}
+		1 & 1\\
+		0 & 1
+	  \end{smallmatrix}\big)$ and $[S] = \big(\begin{smallmatrix}
+		0 & -1\\
+		1 & 0
+	  \end{smallmatrix}\big)$ 
+\end{frame}
+
+\begin{frame}{\underline{Proving $\mathcal{F}_0$}}
+	\begin{block}{Claim}
+		For all $\tau \in \mathbb{H}$ exists $g \in G'$ such that $g\tau \in \mathcal{F}_0$
+		\\
+		$\rightarrow$ $\mathcal{F}_0$ contains exactly one copy of each inequivalent torus.
+	\end{block}
+	\underline{Step 1}: For each $\tau$ there is $g \in G'$ such that $\Im(g\tau)$ is largest.
+	\\
+	\underline{Step 2}: Show that $\tau' = T^{n}g\tau \in \mathcal{S}_0$ really is in $\bar{\mathcal{F}_0}$.
+	\\
+	\underline{Step 3}: Send $\tau \in \bar{\mathcal{F}_0}$ to $\tau \in \mathcal{F}_0$ via T- or S-transform.
+\end{frame}
 
 \section{Torus partition function}
 
