@@ -187,7 +187,7 @@
 
 \subsection{General tori}
 
-\begin{frame}{General tori}
+\begin{frame}{\underline{General tori}}
 	Rectangular tori represent only a subset off all conformally inequivalent tori. Let's construct a more general class of tori:
 	\\
 	\begin{block}{General construction of a torus Riemann surface}
@@ -204,7 +204,7 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}{Twisting the torus}
+\begin{frame}{\underline{Twisting the torus}}
 	Intuitively, if a cylinder is twisted and the end surfaces are connected, we expect a different torus. 
 	\\
 	\underline{Formally}: Consider $\Re(\tau) \neq 0$ and a point $P = 0 = \tau$. We can reconstruct the rectangular $\textit{fundamental domain}$ by using the identification $z \sim z + 1$.
@@ -217,7 +217,7 @@
 	
 \end{frame}
 
-\begin{frame}{Twisting parameter}
+\begin{frame}{\underline{Twisting parameter}}
 
 	
 	The point $P$ is no longer identified with a point on the perpendicular. Indeed the degree of twisting is parametrised by $\theta = 2\pi \Re(\tau)$.
@@ -229,11 +229,56 @@
 		\includegraphics[width = 0.55\textwidth]{elements/tau map.PNG}
 	\end{figure}
 	With the identification $z \sim z + 1$ we can conclude $\tau \sim \tau + 1$ and hence $\theta \sim \theta + 2\pi$.
+	\begin{block}{Note:}
+		The "twisting" does not correspond to actual torsion. It is the mere identification of the points $P$.
+	\end{block}
+\end{frame}
+
+
+\begin{frame}{\underline{Moduli space I}}
+	So far we have established that $\Im(\tau) > 0 \Leftrightarrow \tau \in \mathbb{H}$.
+	However, the identification $\tau \sim \tau + 1$ implies that the space of inequivalent tori is smaller. Indeed:
+	\begin{block}{Strip $\mathcal{S}_{0}$}
+		$\mathcal{S}_{0} = \{-\frac{1}{2} < \Re(\tau) < \frac{1}{2}, \Im(\tau) > 0\}$
+	\end{block}
+	Is $\mathcal{S}_{0}$ the moduli space of tori?
+	\\
+	For rectangular tori we found that $T, \frac{1}{T}$ yield equivalent tori. Since $\tau = iT$ we have $\tau' = \frac{i}{T} = -\frac{1}{\tau}$.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 0.55\textwidth]{elements/s module trans.PNG}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{\underline{Moduli space II}}
+
+	We have found two identifications:
+	\begin{block}{T-module transform}
+		$\tau \sim \tau + 1$
+	\end{block}
+	\begin{block}{S-module transform}
+		$\tau \sim -\frac{1}{\tau}$
+	\end{block}
+	The corresponding fundamental domain should be a subset of $\mathcal{S}_{0}$. Indeed, the S-module transform identifies points in $|\tau| < 1$ with points in $|\tau| > 1$.
+	\\
+	Therefore:
+	\begin{block}{Fundamental domain $\mathcal{F}_{0}$}
+		$\mathcal{F}_{0} = \{-\frac{1}{2} < \Re(\tau) < \frac{1}{2}, \Im(\tau) > 0, |\tau| \geq 1 \textrm{ and } \Re(\tau) \geq 0 \textrm{ if } |\tau| = 1\}$
+	\end{block}
 	
 \end{frame}
 
 
+\begin{frame}
 
+	\begin{textblock*}{60mm}(0.3\paperwidth,0.25\paperheight)
+		{\tiny \color{accentcolor}
+		\includegraphics[width=60mm]{elements/fundamental domain.PNG}\\[2mm]
+		}
+	\end{textblock*}
+
+	
+\end{frame}
 
 
 \section{Torus partition function}

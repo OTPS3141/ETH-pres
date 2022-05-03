@@ -1800,6 +1800,32 @@ INPUT ./elements/tau map.PNG
 INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT elements/eth_logo_kurz_pos.pdf
 INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/s module trans.PNG
+INPUT ./elements/s module trans.PNG
+INPUT elements/s module trans.PNG
+INPUT ./elements/s module trans.PNG
+INPUT ./elements/s module trans.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT c:/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
+INPUT c:/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
+INPUT c:/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
+INPUT c:/texlive/2021/texmf-dist/tex/latex/lm/t1lmr.fd
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/fundamental domain.PNG
+INPUT ./elements/fundamental domain.PNG
+INPUT elements/fundamental domain.PNG
+INPUT ./elements/fundamental domain.PNG
+INPUT ./elements/fundamental domain.PNG
+INPUT ./elements/eth_logo_kurz_pos.pdf
+INPUT elements/eth_logo_kurz_pos.pdf
+INPUT ./elements/eth_logo_kurz_pos.pdf
 INPUT ./sample.toc
 INPUT sample.toc
 INPUT sample.toc
@@ -1818,6 +1844,7 @@ OUTPUT sample.snm
 INPUT sample.aux
 INPUT ./sample.out
 INPUT ./sample.out
+INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
