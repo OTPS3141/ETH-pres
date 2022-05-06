@@ -1,6 +1,8 @@
 \documentclass[11pt,aspectratio=169]{beamer}
 
 \usepackage{amssymb}
+\usepackage{physics}
+% \DeclareMathOperator{\Tr}{Tr}
 
 \title{Torus amplitudes and modular invariance}
 \date[16.5.2022]{Seminar on Theoretical Physics}
@@ -338,10 +340,10 @@
 
 
 
-\subsection{Compactified closed strings}
+\subsection{Compactified and Minkowsi closed strings}
 
 \begin{frame}{Compactified bosonic string}
-	Consider the compactified coordinate $X \sim X + 2\pi r$. In a free field theory the action can be written as 
+	Consider one compactified coordinate $X \sim X + 2\pi r$. In a free field theory the action can be written as 
 	$S = \frac{1}{2\pi}\int \partial X \bar{\partial X}$ 
 	\\
 	For such coordinates the boundary conditions read:
@@ -356,17 +358,127 @@
 	\begin{equation}
 		X_0^{(n, n')}(z, \bar{z}) = \frac{2\pi r}{2i\tau_2}(n'(z - \bar{z}) + n(\tau\bar{z} - \bar{\tau}z))
 	\end{equation}
+	$\rightarrow$ one dimension is compactified
 
 \end{frame}
 
-\begin{frame}{\underline{Functional integral}}
+
+\begin{frame}{\underline{Partition function}}
+
+	Obtaining the space-time form: 
+	\begin{equation}
+		p_L = \frac{m}{2r} + nr \textrm{ and }
+		p_R = \frac{m}{2r} - nr
+	\end{equation}
+	For $r \rightarrow \infty$ we get continuous momenta $p_L = p_R = \frac{m}{2r}$.
+
+	For a compactified closed string:
+	\begin{equation}
+		Z(r) = \int e^{-S} = \frac{1}{|\eta|^2} \sum_{m, n} q^{\frac{1}{2}p_L^2}\bar{q}^{\frac{1}{2}p_R^2}
+	\end{equation}
+	
+	
+\end{frame}
+\begin{frame}{Return to Minkowski space}
+	For $r \rightarrow \infty$ with $q = e^{2\pi i \tau}$:
+	\begin{align*}
+		Z(r) &= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk q^{\frac{1}{2}k^2}\bar{q}^{\frac{1}{2}} \\
+		&= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk e^{2\pi i \frac{1}{2}k^2 \tau}e^{-2\pi i \frac{1}{2}k^2 \bar{\tau}} \\
+		&= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk e^{2\pi i \frac{1}{2}k^2 2 i \Im{\tau}} \\
+		&= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk e^{-2\pi k^2 \Im{\tau}} \\
+		&\propto \frac{1}{|\eta|^2} \frac{1}{\Im(\tau)^{\frac{1}{2}}}
+	\end{align*}
 	
 \end{frame}
 
-\subsection{World-sheet closed strings}
+
+
+\subsection{T-duality}
+
+\begin{frame}{T-duality}
+	Consider again the momentum and winding for the compactified string:
+	\begin{equation}
+		p = \frac{m}{r} \textrm{ and } w = nr
+	\end{equation}
+	We see that if we interchange $m \rightarrow n$ and $\frac{1}{r} \rightarrow r$, we interchange the meaning of winding and momentum. 
+	\\
+	This change however leaves the partition function invariant and we conclude T-duality.
+\end{frame}
+
+
+
+
+\subsection{Partition function via state trace}
+
+\begin{frame}{Partition function via state trace}
+	In quantum statistics:
+	\begin{equation}
+		Z = \Tr(e^{-\beta H}) \propto \sum_{\Phi}\bra{\Phi} H \ket{\Phi}
+	\end{equation}
+	The trace should run over all states of the torus. This means we need to find a propagator 
+	which propagates through all configurations in $\tau$ and $\sigma$.
+	Lets postulate:
+	\begin{equation}
+		Z(\tau) \propto \Tr(q^{L_0}\bar{q}^{\bar{L_0}})
+	\end{equation} 
+	with $q = e^{2\pi i \tau}$ and $L_0 = \sum \alpha_{-m}\alpha_m + \frac{1}{2}p_L^2$.
+	
+
+\end{frame}
+
+\begin{frame}
+	Is this a reasonable approach? Two hints:
+	\\~\\
+	I:
+	\begin{equation}
+		\Tr(q^{L_0}) \propto \Tr(q^{\sum_{n=1}^{\infty}\alpha_{-n}\alpha_n}) = \prod_{n=1}^{\infty}(1 + q^n + q^{2n} + \dots) = \prod_{n=1}^{\infty}\frac{1}{1-q^n}	
+	\end{equation}
+	This is the partition function of a boson from the Bose-Einstein distribution.
+	\\~\\
+	II:
+	\begin{align*}
+		q^{L_0}\bar{q}^{\bar{L_0}} &= e^{2\pi i (\tau_1 + i \tau_2)L_0}e^{-2\pi i (\tau_1 - i \tau_2)\bar{L_0}}\\
+		&= e^{2 \pi i \tau_1 (L_0 - \bar{L_0})}e^{-2\pi \tau_2 (L_0 + \bar{L_0})}
+	\end{align*}
+	We can interpret $L_0 - \bar{L_0}$ as the momentum $P$ which generates translation in $\sigma$. Similarly $L_0 + \bar{L_0}$ can be seen as Hamiltonian $H$ which generates $\tau$ translation.
+	\\
+	The propagator has then the interpretation of a $\tau$ and $\sigma$ sweep.
+
+\end{frame}
+
+\begin{frame}
+	The $\textit{Dedekind eta function}$ is defined as:
+	\begin{equation}
+		\eta(\tau) = q^{\frac{1}{24}}\prod_{n=1}^{\infty}(1 - q^n)
+	\end{equation}
+	Therefore we get:
+	\begin{equation}
+		(q\bar{q})^{-\frac{1}{24}}\Tr(q^{L_0}\bar{q}^{\bar{L_0}}) = \frac{1}{|\eta|^2}
+	\end{equation}
+	
+\end{frame}
 
 
 \section{Modular invariance of the amplitude}
+
+\begin{frame}{\underline{The amplitude}}
+	The correctly normalized one-loop vacuum amplitude reads:
+	\begin{equation}
+		A_0^{g=1} = \frac{V_{26}}{l_s^{26}}\int_{\mathcal{F}_0}\frac{d^2\tau}{4(\Im(\tau))^2}Z(\tau, \bar{\tau})
+	\end{equation}
+	This amplitude is carries the correct physical intuition: each possible form of a one-loop interaction is parametrised by $\tau$.
+	To get a probability measure for a process we therefore need to weight every $\tau \in \mathcal{F}_0$ with the partition function $Z(\tau, \bar{\tau})$
+	\\~\\
+	The partition function for the 24-dimensional transverse coordinate space is:
+	\begin{equation}
+		Z(\tau, \bar{\tau}) = (\Im(\tau))^{-12}|\eta(\tau)|^{-48}
+	\end{equation}
+\end{frame}
+
+\begin{frame}\underline{Modular invariance}
+	
+	
+\end{frame}
 
 
 
