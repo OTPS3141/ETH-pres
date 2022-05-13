@@ -3,6 +3,8 @@
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{amsmath}
 % \DeclareMathOperator{\Tr}{Tr}
 
 \title{Torus amplitudes and modular invariance}
@@ -372,7 +374,7 @@
 	\\
 	Intuitively we expect the partition function to count all states of the single free boson.
 	\\~\\
-	For a compactified closed string a Euclidean path integral yields the following expression for the partition function:
+	For a compactified closed string a Euclidean path integral yields the following expression for the partition function (using $q = e^{2\pi i \tau}$):
 	\begin{equation}
 		Z_r (\tau, \bar{\tau}) = \int e^{-S} = \frac{1}{|\eta|^2} \sum_{m, n} q^{\frac{1}{2}p_L^2}\bar{q}^{\frac{1}{2}p_R^2}
 	\end{equation}
@@ -381,6 +383,7 @@
 		p_L = \frac{m}{2r} + nr \textrm{ and }
 		p_R = \frac{m}{2r} - nr
 	\end{equation}
+	and $p = \frac{m}{r}, w = nr$.
 	% For such coordinates the boundary conditions read:
 	% \begin{block}{BC}
 	% 	$X_0(z + \tau, \bar{z + \tau}) = X_0(z, \bar{z}) + 2\pi r n'$ 
@@ -417,6 +420,23 @@
 	So the partition function counts the oscillation modes of the string and the quantised momenta/winding.
 \end{frame}
 
+\begin{frame}{\underline{Dedekind eta function}}
+	The $\textit{Dedekind eta function}$ is defined as:
+	\begin{equation}
+		\eta(\tau) = q^{\frac{1}{24}}\prod_{n=1}^{\infty}(1 - q^n)
+	\end{equation}
+	% Therefore we get:
+	% \begin{equation}
+	% 	(q\bar{q})^{-\frac{1}{24}}\Tr(q^{L_0}\bar{q}^{\bar{L_0}}) = \frac{1}{|\eta|^2}
+	% \end{equation}
+	\\~\\
+	The Dedekind eta function satisfies:
+	\begin{equation}
+		\eta(\tau + 1) = e^{i\frac{\pi}{12}} \eta(\tau) \textrm{ and } \eta(-\frac{1}{\tau}) = \sqrt{-i\tau}\eta(\tau)
+	\end{equation}
+	
+\end{frame}
+
 \subsection{Modular invariance of partition function}
 
 \begin{frame}{T-module transform}
@@ -447,13 +467,43 @@
 	\begin{equation}
 		\sum_{q\in \Sigma}e^{-\pi a q^2} = \frac{1}{a^{n/2}}\sum_{p\in \Sigma^*}e^{-\frac{\pi}{a}p^2}
 	\end{equation}
-	where $\Sigma$ denotes the $m, n$ lattice.
+	where $\Sigma$ denotes the $m, n$ lattice and $\Sigma^*$ the reciprocal lattice.
 \end{frame}
 
-\begin{frame}{\underline{Return to Minkowski space}}
-	For $r \rightarrow \infty$ we get continuous momenta $p_L = p_R = \frac{m}{2r}$ and with $q = e^{2\pi i \tau}$ we can transform back to Minkowsi space:
+\begin{frame}
+	We can write the partition function as:
 	\begin{align*}
-		Z(r) &= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk q^{\frac{1}{2}k^2}\bar{q}^{\frac{1}{2}} \\
+		Z_r (\tau, \bar{\tau}) &= \frac{1}{|\eta|^2} \sum_{p_L\in\Sigma, p_R\in\bar{\Sigma}} q^{\frac{1}{2}p_L^2}\bar{q}^{\frac{1}{2}p_R^2} \\
+		&= \frac{1}{|\eta|^2} \sum_{p_L\in\Sigma, p_R\in\bar{\Sigma}} e^{-\pi(-i\tau)p_L^2} e^{-\pi(i\bar{\tau})p_R^2} \\
+	\end{align*}
+	Under the S-module transform the partition function becomes (assuming $\Sigma = \Sigma^*$):
+	\begin{align*}
+		Z_r (-\frac{1}{\tau}, -\frac{1}{\bar{\tau}}) &= \frac{1}{|\tau||\eta|^2} \sum_{p_L\in\Sigma}e^{-\pi(\frac{1}{-i\tau})p_L^2}\sum_{p_R\in\bar{\Sigma}}e^{-\pi(\frac{1}{i\bar{\tau}})p_R^2} \\
+		&= \frac{1}{|\tau||\eta|^2} \sum_{p_L\in\Sigma^*} \sqrt{-i\tau} e^{i\pi\tau p_L^2} \sum_{p_R\in\bar{\Sigma}^*} \sqrt{i\bar{\tau}} e^{-i\pi\bar{\tau}p_R^2} \\
+		&= \frac{1}{|\tau||\eta|^2} |\tau| \sum_{p_L\in\Sigma, p_R\in\bar{\Sigma}} q^{\frac{1}{2}p_L^2}\bar{q}^{\frac{1}{2}p_R^2} \\
+		&= Z_r (\tau, \bar{\tau})
+	\end{align*}
+\end{frame}
+
+\begin{frame}{\underline{T-duality}}
+	Consider again the momentum and winding for the compactified string:
+	\begin{equation}
+		p = \frac{m}{r} \textrm{ and } w = nr
+	\end{equation}
+	Let's interchange $p \rightarrow w$ and $r \rightarrow \frac{1}{2r}$. 
+	\\
+	So:
+	\begin{align*}
+		p_L &= \frac{m}{2r} + nr \rightarrow mr + \frac{n}{2r} \\
+		p_R &= \frac{m}{2r} - nr \rightarrow mr - \frac{n}{2r} \\
+	\end{align*}
+	This change however leaves the partition function invariant since we also changed the meaning of $p, w$ and we can conclude T-duality for the compactified closed string partition function.
+\end{frame}
+
+\begin{frame}{\underline{Return to flat space}}
+	For $r \rightarrow \infty$ we get continuous momenta $p_L = p_R = \frac{m}{2r}$ and with $q = e^{2\pi i \tau}$ we can transform back to flat space:
+	\begin{align*}
+		Z(r) &= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk q^{\frac{1}{2}k^2}\bar{q}^{\frac{1}{2}k^2} \\
 		&= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk e^{2\pi i \frac{1}{2}k^2 \tau}e^{-2\pi i \frac{1}{2}k^2 \bar{\tau}} \\
 		&= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk e^{2\pi i \frac{1}{2}k^2 2 i \Im{\tau}} \\
 		&= \frac{1}{|\eta|^2} \int_{-\infty}^{\infty}dk e^{-2\pi k^2 \Im{\tau}} \\
@@ -465,15 +515,7 @@
 
 
 
-\begin{frame}{\underline{T-duality}}
-	Consider again the momentum and winding for the compactified string:
-	\begin{equation}
-		p = \frac{m}{r} \textrm{ and } w = nr
-	\end{equation}
-	We see that if we interchange $m \rightarrow n$ and $\frac{1}{r} \rightarrow r$, we interchange the meaning of winding and momentum. 
-	\\
-	This change however leaves the partition function invariant and we can conclude T-duality for the compactified closed string partition function.
-\end{frame}
+
 
 
 
@@ -481,17 +523,19 @@
 \subsection{Partition function via state trace}
 
 \begin{frame}{\underline{Partition function via state trace}}
+	A alternative approach to obtain the partition function is the state trace.
+	\\~\\
 	In quantum statistics:
 	\begin{equation}
-		Z = \Tr(e^{-\beta H}) \propto \sum_{\Phi}\bra{\Phi} H \ket{\Phi}
+		Z = \Tr(e^{-\beta H}) \propto \sum_{\Phi}\bra{\Phi} e^{-\beta H} \ket{\Phi}
 	\end{equation}
 	The trace should run over all states of the torus. This means we need to find a propagator 
-	which propagates through all configurations in $\tau$ and $\sigma$.
-	\\~\\
-	Consider the state trace for a harmonic oscillator with number operators $N_L,N_R$ in 24 transverse dimensions:
-	\begin{equation}
-		\Tr(\bar{q}^{N_L - 1}q^{N_R - 1}) = (q\bar{q})^{-1}\prod_{n=1}^{\infty}(1 - \bar{q}^n)^{-24}(1 - q^n)^{-24} = \frac{1}{|\eta(\tau)|^{48}}
-	\end{equation}
+	which propagates through all state configurations of the torus.
+	% \\~\\
+	% Consider the state trace for a harmonic oscillator with number operators $N_L,N_R$ in 24 transverse dimensions:
+	% \begin{equation}
+	% 	\Tr(\bar{q}^{N_L - 1}q^{N_R - 1}) = (q\bar{q})^{-1}\prod_{n=1}^{\infty}(1 - \bar{q}^n)^{-24}(1 - q^n)^{-24} = \frac{1}{|\eta(\tau)|^{48}}
+	% \end{equation}
 	% Lets postulate:
 	% \begin{equation}
 	% 	Z(\tau) \propto \Tr(q^{L_0}\bar{q}^{\bar{L_0}})
@@ -502,50 +546,15 @@
 \end{frame}
 
 \begin{frame}
-	The $\textit{Dedekind eta function}$ is defined as:
-	\begin{equation}
-		\eta(\tau) = q^{\frac{1}{24}}\prod_{n=1}^{\infty}(1 - q^n)
-	\end{equation}
-	Therefore we get:
-	\begin{equation}
-		(q\bar{q})^{-\frac{1}{24}}\Tr(q^{L_0}\bar{q}^{\bar{L_0}}) = \frac{1}{|\eta|^2}
-	\end{equation}
+	The partition function can be split up into a part corresponding to the oscillation modes of the world-sheet string and the momentum.
 	\\~\\
-	The Dedekind eta function satisfies:
+	The momentum states are counted via:
 	\begin{equation}
-		\eta(\tau + 1) = e^{i\frac{\pi}{12}} \eta(\tau) \textrm{ and } \eta(-\frac{1}{\tau}) = \sqrt{-i\tau}\eta(\tau)
-	\end{equation}
-	
-\end{frame}
-
-\begin{frame}{\underline{Hamiltonian interpretation}}
-	In light-cone gauge we have:
+		\sum_{p_L\in\Sigma, p_R\in\bar{\Sigma}} q^{\frac{1}{2}p_L^2}\bar{q}^{\frac{1}{2}p_R^2}  \xrightarrow{\text{$r \rightarrow \infty$}} \int_{-\infty}^{\infty}dk q^{\frac{1}{2}k^2}\bar{q}^{\frac{1}{2}k^2} \propto \frac{1}{\Im(\tau)^{\frac{1}{2}}}
+	\end{equation}	
+	A possible way of counting the oscillation states is:
 	\begin{equation}
-		H_{l.c.} = \frac{\alpha'}{2} p^{I}p^{I} + N^{\perp} + \bar{N}^{\perp} - 2
-	\end{equation}
-	and
-	\begin{equation}
-		P_{l.c.} = N^{\perp} - \bar{N}^{\perp}
-	\end{equation}
-	\\
-	The general expression for the oscillator trace becomes (using $\tau = \tau_1 + i\tau_2$):
-	\begin{align*}
-		&= \Tr(e^{-2\pi \tau_2 (N^{\perp} + \bar{N}^{\perp} - 2)}e^{2\pi i \tau_1 (N^{\perp} - \bar{N}^{\perp})}) \\
-		&=  e^{\pi \alpha' \tau_2 (p^{I})^2} \Tr(e^{-2\pi \tau_2 H_{l.c.}}e^{-2\pi i \tau_1 P_{l.c.}}) \\
-	\end{align*}
-
-
-\end{frame}
-
-\begin{frame}
-	We can therefore conclude:
-	\begin{equation}
-		Z(\tau, \bar{\tau}) \propto \Tr(e^{-2\pi \tau_2 H_{l.c.}}e^{-2\pi i \tau_1 P_{l.c.}})
-	\end{equation}
-	\\
-	With a few more transformations we can obtain an expression for the partition function w.r.t. the Virasoro operators:
-	\begin{equation}
-		Z(\tau, \bar{\tau}) = \Tr(q^{L_0 - \frac{c}{24}}\bar{q}^{\bar{L_0} - \frac{\bar{c}}{24}})
+		\sum_{\Phi} \bra{\Phi} e^{2\pi i \tau L_0}e^{-2\pi i \bar{\tau} \bar{L}_0} \ket{\Phi} = \Tr(q^{L_0}\bar{q}^{L_0})
 	\end{equation}
 \end{frame}
 
@@ -557,6 +566,11 @@
 		\Tr(q^{L_0}) \propto \Tr(q^{\sum_{n=1}^{\infty}\alpha_{-n}\alpha_n}) = \prod_{n=1}^{\infty}(1 + q^n + q^{2n} + \dots) = \prod_{n=1}^{\infty}\frac{1}{1-q^n}	
 	\end{equation}
 	This is the partition function of a boson from the Bose-Einstein distribution.
+	\\
+	And:
+	\begin{equation}
+		\Tr(q^{L_0 - \frac{c}{24}}) = q^{-\frac{1}{24}} \prod_{n=1}^{\infty}\frac{1}{1-q^n}	= \frac{1}{\eta(\tau)}
+	\end{equation}
 	\\~\\
 	II:
 	\begin{align*}
@@ -568,6 +582,71 @@
 	The propagator has then the interpretation of a $\tau$ and $\sigma$ sweep.
 
 \end{frame}
+
+% \begin{frame}{\underline{Hamiltonian interpretation}}
+% 	In light-cone gauge we have:
+% 	\begin{equation}
+% 		H_{l.c.} = \frac{\alpha'}{2} p^{I}p^{I} + N^{\perp} + \bar{N}^{\perp} - 2
+% 	\end{equation}
+% 	and
+% 	\begin{equation}
+% 		P_{l.c.} = N^{\perp} - \bar{N}^{\perp}
+% 	\end{equation}
+% 	\\
+% 	The general expression for the oscillator trace becomes (using $\tau = \tau_1 + i\tau_2$):
+% 	\begin{align*}
+% 		&= \Tr(e^{-2\pi \tau_2 (N^{\perp} + \bar{N}^{\perp} - 2)}e^{2\pi i \tau_1 (N^{\perp} - \bar{N}^{\perp})}) \\
+% 		&=  e^{\pi \alpha' \tau_2 (p^{I})^2} \Tr(e^{-2\pi \tau_2 H_{l.c.}}e^{-2\pi i \tau_1 P_{l.c.}}) \\
+% 	\end{align*}
+
+
+% \end{frame}
+
+% \begin{frame}
+% 	We can therefore conclude:
+% 	\begin{equation}
+% 		Z(\tau, \bar{\tau}) \propto \Tr(e^{-2\pi \tau_2 H_{l.c.}}e^{-2\pi i \tau_1 P_{l.c.}})
+% 	\end{equation}
+% 	\\
+% 	With a few more transformations we can obtain an expression for the partition function w.r.t. the Virasoro operators:
+% 	\begin{equation}
+% 		Z(\tau, \bar{\tau}) = \Tr(q^{L_0 - \frac{c}{24}}\bar{q}^{\bar{L_0} - \frac{\bar{c}}{24}})
+% 	\end{equation}
+% \end{frame}
+
+\begin{frame}{\underline{Light-cone partition function}}
+	So far the partition function has been derived for a single free boson in one dimension:
+	\begin{equation}
+		Z(\tau, \bar{\tau})_{1d} = \frac{1}{|\eta(\tau)|^2}\frac{1}{(\Im\tau)^{\frac{1}{2}}}
+	\end{equation} 
+	\\
+	The generalisation for 24 transverse dimensions in light-cone gauge is:
+	\begin{block}{Light-cone partition function}
+		\begin{equation}
+			Z(\tau, \bar{\tau})_{l.c.} = (\frac{1}{|\eta(\tau)|^2}\frac{1}{(\Im\tau)^{\frac{1}{2}}})^{24} = \frac{1}{|\eta(\tau)|^{48}}\frac{1}{(\Im\tau)^{12}}
+		\end{equation}
+	\end{block}
+	
+\end{frame}
+
+% \begin{frame}{\underline{Hamiltonian interpretation}}
+% 	In light-cone gauge we have:
+% 	\begin{equation}
+% 		H_{l.c.} = \frac{\alpha'}{2} p^{I}p^{I} + N^{\perp} + \bar{N}^{\perp} - 2
+% 	\end{equation}
+% 	and
+% 	\begin{equation}
+% 		P_{l.c.} = N^{\perp} - \bar{N}^{\perp}
+% 	\end{equation}
+% 	\\
+% 	The general expression for the oscillator trace becomes (using $\tau = \tau_1 + i\tau_2$):
+% 	\begin{align*}
+% 		&= \Tr(e^{-2\pi \tau_2 (N^{\perp} + \bar{N}^{\perp} - 2)}e^{2\pi i \tau_1 (N^{\perp} - \bar{N}^{\perp})}) \\
+% 		&=  e^{\pi \alpha' \tau_2 (p^{I})^2} \Tr(e^{-2\pi \tau_2 H_{l.c.}}e^{-2\pi i \tau_1 P_{l.c.}}) \\
+% 	\end{align*}
+
+
+% \end{frame}
 
 
 
@@ -582,20 +661,22 @@
 	This amplitude is carries the correct physical intuition: each possible form of a one-loop interaction is parametrised by $\tau$.
 	To get a probability measure for a process we therefore need to weight every $\tau \in \mathcal{F}_0$ with the partition function $Z(\tau, \bar{\tau})$
 	\\~\\
-	With the found partition function for the 24-dimensional transverse coordinate space we have:
+	We can rewrite the amplitude using the light-cone Hamiltonian and momentum:
 	\begin{equation}
 		A_0^{g=1} = V_{26} \int_{\mathcal{F}_0} \frac{d^2\tau}{16\pi^2\alpha'\tau_2^2} \int \frac{d^{24}p}{(2\pi)^{24}}\Tr(e^{-2\pi \tau_2 H_{l.c.}}e^{-2\pi i \tau_1 P_{l.c.}})
 	\end{equation}
 \end{frame}
 
 \begin{frame}
-	This expression makes sense when we link it to the construction of the moduli space:
-	\\~\\
-	Consider $\tau_1 = 0$. In this case $\tau_2$ plays the role of a Euclidean time. We know that $\tau_1 = 0$ corresponds to a rectangular torus.
+	
+	\begin{block}{Connection to moduli space and twisting angle}
+		Consider $\tau_1 = 0$. In this case $\tau_2$ plays the role of a Euclidean time. We know that $\tau_1 = 0$ corresponds to a rectangular torus.
 	\\
 	The partition function counts the number of states propagating around the torus in $\tau_2$ direction and weights them with $e^{-2\pi\tau_2H_{l.c.}}$.
 	\\~\\
 	Now consider a cylinder with length $\tau_2$ whose ends are identified. We can twist the ends by the twist angle $\theta = 2\pi \tau_1$. This twist is then induces by $P_{l.c.}$.
+	\end{block}
+	
 \end{frame}
 
 \begin{frame}{\underline{Modular invariance}}
@@ -612,7 +693,11 @@
 	\end{align*}
 	So $d^2\tau \rightarrow |c\tau + d|^{-4}d^2\tau$
 	\\
-	Also: $\Im(\tau) \rightarrow |c\tau + d|^{-2}\Im(\tau)$
+	Also: 
+	\begin{equation}
+		\Im(g\tau) = |c\tau + d|^{-2}\Im(\tau)
+	\end{equation}
+	
 	
 \end{frame}
 
@@ -622,8 +707,8 @@
 		\frac{d^2\tau}{\Im(\tau)^2} \rightarrow \frac{|c\tau + d|^{-4}d^2\tau}{(|c\tau + d|^{-2}\Im(\tau))^2} = \frac{d^2\tau}{\Im(\tau)^2}
 	\end{equation}
 	\\~\\
-	Since the modulus of the eta function stays invariant under T- or S-module transforms, we can conclude that the partition function is also modular invariant.
-	\\
+	As previously shown, the partition function is modular invariant. 
+	\\~\\
 	This makes the whole amplitude modular invariant.
 \end{frame}
 
