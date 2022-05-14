@@ -1,11 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1652454165 "c:/Users/otto4/Documents/GitHub/ethbeamer-master/sample.tex" "sample.pdf" "sample" 1652454168
+["pdflatex"] 1652508952 "c:/Users/otto4/Documents/GitHub/ethbeamer-master/sample.tex" "sample.pdf" "sample" 1652508955
   "beamercolorthemeeth.sty" 1631626170 1689 5eaa863badab2caf37ae17654e2702c4 ""
   "beamerfontthemeeth.sty" 1651503473 1335 67b3d5171c7cedff555abe1cca21521c ""
   "beamerinnerthemeeth.sty" 1631626170 695 01eed84305c67c4b46230c825b02ce7d ""
   "beamerouterthemeeth.sty" 1631626170 3263 446f2c918f9012653fe4de458ee4a182 ""
   "beamerthemeeth.sty" 1631626170 1177 8339ef5ef3661cde37313c6c77e41d48 ""
-  "c:/Users/otto4/Documents/GitHub/ethbeamer-master/sample.tex" 1652454164 26834 0d854930a603e8073c41bd226287424e ""
+  "c:/Users/otto4/Documents/GitHub/ethbeamer-master/sample.tex" 1652508951 26853 3bbb7c13c9e97154e71b69e719145a47 ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1638791658 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1638791658 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1638791658 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -305,12 +305,12 @@
   "elements/three maps.PNG" 1651499716 13256 dd6c4d8e8ebae3b754e24ec22b79250e ""
   "elements/title-page-image.jpg" 1631626170 1194138 169f7885a20d1ad211c2263a0d2a6b99 ""
   "elements/twisted torus.PNG" 1651504555 31166 801411870046f80cc55605d68888a4f4 ""
-  "sample.aux" 1652454168 9703 7656af06f8b08bf611bca1731abebda0 "pdflatex"
-  "sample.nav" 1652454168 6116 2e75bd947e13b138be071332af2e26c9 "pdflatex"
-  "sample.out" 1652454168 1950 9be9e8628109a90cec9e9b34e36362d2 "pdflatex"
-  "sample.tex" 1652454164 26834 0d854930a603e8073c41bd226287424e ""
-  "sample.toc" 1652454168 704 528de8936bed3f9e0b54c73684803359 "pdflatex"
-  "sample.vrb" 1652454167 567 e6a8137cc6842e22a5b45aa97fa29eb6 "pdflatex"
+  "sample.aux" 1652508955 9703 7656af06f8b08bf611bca1731abebda0 "pdflatex"
+  "sample.nav" 1652508955 6116 2e75bd947e13b138be071332af2e26c9 "pdflatex"
+  "sample.out" 1652508955 1950 9be9e8628109a90cec9e9b34e36362d2 "pdflatex"
+  "sample.tex" 1652508951 26853 3bbb7c13c9e97154e71b69e719145a47 ""
+  "sample.toc" 1652508955 704 528de8936bed3f9e0b54c73684803359 "pdflatex"
+  "sample.vrb" 1652508954 567 e6a8137cc6842e22a5b45aa97fa29eb6 "pdflatex"
   (generated)
   "sample.aux"
   "sample.log"
