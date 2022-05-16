@@ -466,7 +466,10 @@
 	\begin{equation}
 		Z_r (\tau, \bar{\tau}) = \frac{1}{|\eta|^2} \sum_{p_L\in\Sigma, p_R\in\bar{\Sigma}} q^{\frac{1}{2}p_L^2}\bar{q}^{\frac{1}{2}p_R^2} = \frac{1}{|\eta|^2}\sum_{(p, w)\in\mathbb{Z}^2}e^{-\pi\begin{bmatrix} p \\ w \end{bmatrix}^T A \begin{bmatrix} p \\ w \end{bmatrix}}
 	\end{equation}
-	with $A = -\begin{bmatrix} \frac{1}{2r^2}\tau_2 & i \tau_1 \\ i \tau_1 & 2r^2 \tau_2 \end{bmatrix}$
+	with 
+	\begin{equation}
+		A = -\begin{bmatrix} \frac{1}{2r^2}\tau_2 & i \tau_1 \\ i \tau_1 & 2r^2 \tau_2 \end{bmatrix}
+	\end{equation}
 	% The general case for the partition function reads:
 	% \begin{equation}
 	% 	\sum_{q\in \Sigma}e^{-\pi a q^2} = \frac{1}{a^{n/2}}\sum_{p\in \Sigma^*}e^{-\frac{\pi}{a}p^2}
@@ -477,9 +480,13 @@
 \begin{frame}
 	Using
 	\begin{equation}
-		\mathcal{F}(\exp{-\pi\begin{bmatrix} p \\ w \end{bmatrix}^T A \begin{bmatrix} p \\ w \end{bmatrix}}) = \det{A}^{-1}\exp{-\pi\begin{bmatrix} p \\ w \end{bmatrix}^T A^{-1} \begin{bmatrix} p \\ w \end{bmatrix}}
+		\mathcal{F}(\exp{-\pi\begin{bmatrix} p \\ w \end{bmatrix}^T A \begin{bmatrix} p \\ w \end{bmatrix}}) = \det{A}^{-\frac{1}{2}}\exp{-\pi\begin{bmatrix} p \\ w \end{bmatrix}^T A^{-1} \begin{bmatrix} p \\ w \end{bmatrix}}
 	\end{equation}
-	\\~\\
+	\\
+	or
+	\begin{equation}
+		\sum_{q\in \Sigma}e^{-\pi a q^2} = \frac{1}{a^{1/2}}\sum_{p\in \Sigma^*}e^{-\frac{\pi}{a}p^2}
+	\end{equation}
 	% We can write the partition function as:
 	% \begin{align*}
 	% 	Z_r (\tau, \bar{\tau}) &= \frac{1}{|\eta|^2} \sum_{p_L\in\Sigma, p_R\in\bar{\Sigma}} q^{\frac{1}{2}p_L^2}\bar{q}^{\frac{1}{2}p_R^2} \\
@@ -503,8 +510,8 @@
 	\\
 	So:
 	\begin{align*}
-		p_L' &= \frac{w}{2} + p = \frac{m}{2r} + nr = p_L\\
-		p_R' &= \frac{w}{2} + p = \frac{m}{2r} - nr = p_R \\
+		p_L' &= \frac{w}{2} + p = \frac{n}{2r} + mr = p_L\\
+		p_R' &= \frac{w}{2} + p = \frac{n}{2r} - mr = p_R \\
 	\end{align*}
 	This change however leaves the partition function invariant. We can conclude T-duality for the compactified closed string partition function:
 	\begin{equation}
@@ -513,7 +520,8 @@
 \end{frame}
 
 \begin{frame}{\underline{Return to flat space}}
-	For $r \rightarrow \infty$ we get continuous momenta $p_L = p_R = \frac{m}{2r}$. The contribution from winding $w = nr$ leads to a fast oscillating factor.
+	For $r \rightarrow \infty$ we get continuous momenta $p_L = p_R = \frac{m}{2r}$. 
+	The contribution from winding $w = nr$ leads to a fast oscillating factor and hence vanishes.
 	\\
 	With $q = e^{2\pi i \tau}$ we can transform back to flat space:
 	\begin{align*}
@@ -698,8 +706,8 @@
 	\\
 	We therefore need to have invariance under T- and S-modular transforms.
 	\\
-	The integration domain $\mathcal{F}_0$ is by definition modular invariant. 
-	\\
+	$\rightarrow$ The integration domain $\mathcal{F}_0$ is by definition modular invariant. 
+	\\~\\
 	Consider a general modular transformation $g$ on the measure:
 	\begin{align*}
 		d(g\tau) &=  [\frac{a(c\tau + d) - (a\tau + b)c}{(c\tau + d)^2}]d\tau \\
@@ -730,8 +738,8 @@
 
 	We have set out to perform the steps:
 	\begin{enumerate}
-		\item Canonical representation of string diagram through moduli space
-		\item Compute scattering amplitude by means of conformal field theory
+		\item Find a canonical representation of string diagram through moduli space
+		\item Compute the scattering amplitude by means of conformal field theory
 	\end{enumerate}
 	We have constructed the moduli space of the torus and with this knowledge defined a amplitude for one-loop processes.
 	\\~\\
